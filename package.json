@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/anirudh-r5/sites#readme",
   "dependencies": {
+    "chance": "^1.1.7",
     "express": "^4.17.1",
     "standard": "^14.3.4"
   },

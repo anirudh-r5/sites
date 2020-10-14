@@ -1,33 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cinema</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item" href="http://localhost:3000/">
-            Home
-          </a>
-        </div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="./lib/main.js"></script>
+  <link rel='stylesheet' type="text/css" href="./lib/style.css">
+  <title>Theatrics - Movie Tickets & Schedules</title>
+</head>
+
+<body>
+  <section class="hero has-text-centered">
+    <div class="hero-body">
+      <div id="main" class="container">
+        <h1 class="title is-1">
+          Theatrix™
+        </h1>
+        <h2 class="subtitle">
+          Your one stop for all your movie needs
+        </h2>
       </div>
-    </nav>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <h2 class="title is-2">
-        This is the cinema page
-      </h2>
-      <p class="subtitle">
-        This website is styled using <strong>Bulma.css</strong>!
-      </p>
+    </div>
+    <div id="search" class="container field has-addons is-invisible">
+      <div class="control">
+        <p class="control has-icons-left">
+          <input id="searchBar" class="input is-rounded is-medium" type="text" placeholder="Enter the movie name">
+          <span class="icon is-medium is-left">
+            <i class="fas fa-search"></i>
+          </span>
+        </p>
+        <p id="searchError" class="help is-danger is-invisible">A movie <i>must</i> have a name...maybe</p>
+      </div>
+      <div class="control">
+        <button id="searchBtn" class="button is-medium is-info is-rounded">
+          Search
+        </button>
+      </div>
     </div>
   </section>
-  </body>
+  <h1 id="movieTitle" class="title"></h1>
+</body>
+
 </html>

@@ -14,7 +14,12 @@ app.get('/calendar', (req, res) => {
 })
 
 app.get('/cinema', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'cinema/cinema.html'))
+  if (!req.query.search) {
+    res.sendFile(path.join(__dirname, 'public', 'cinema/cinema.html'))
+  } else {
+    console.log(req.query)
+    res.sendFile(path.join(__dirname, 'data.json'))
+  }
 })
 
 app.get('/restaurant', (req, res) => {
