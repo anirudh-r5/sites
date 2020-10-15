@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="./lib/main.js"></script>
   <link rel='stylesheet' type="text/css" href="./lib/style.css">
-  <title>Theatrics - Movie Tickets & Schedules</title>
+  <title>Theatrix™ - Movie Tickets & Schedules</title>
 </head>
 
 <body>
@@ -37,8 +37,24 @@
         </button>
       </div>
     </div>
+    <div id="movieError" class="container is-invisible">
+      <p class="title">
+        No movie found :(
+      </p>
+      <p class="subtitle">
+        We couldn't find that movie. Try searching something else or check if you have a typo in your search
+      </p>
+    </div>
   </section>
-  <h1 id="movieTitle" class="title"></h1>
+  <section class="section has-text-centered">
+    <div id="list" class="columns is-centered">
+    </div>
+    <nav id="paginator" class="pagination is-centered is-centered is-invisible" role="navigation">
+      <ul id="pages" class="pagination-list">
+      </ul>
+    </nav>
+    <p><a href="https://github.com/anirudh-r5/"><img src="https://forthebadge.com/images/badges/open-source.svg" alt="forthebadge"></a></p>
+  </section>
 </body>
 
 </html>
