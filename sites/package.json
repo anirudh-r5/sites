@@ -1,0 +1,38 @@
+{
+  "name": "sites",
+  "version": "1.1.0",
+  "description": "A group of websites to be scraped by web-scraper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anirudh-r5/sites.git"
+  },
+  "keywords": [
+    "scraper",
+    "basic",
+    "websites"
+  ],
+  "author": "Anirudh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anirudh-r5/sites/issues"
+  },
+  "homepage": "https://github.com/anirudh-r5/sites#readme",
+  "dependencies": {
+    "capitalize": "^2.0.3",
+    "chance": "^1.1.7",
+    "date-and-time": "^0.14.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "standard": "^14.3.4"
+  },
+  "devDependencies": {
+    "bulma": "^0.9.1",
+    "npm-run-all": "^4.1.5"
+  }
+}
