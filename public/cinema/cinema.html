@@ -1,33 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cinema</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item" href="http://localhost:3000/">
-            Home
-          </a>
-        </div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="./lib/main.js"></script>
+  <link rel='stylesheet' type="text/css" href="./lib/style.css">
+  <title>Theatrix™ - Movie Tickets & Schedules</title>
+</head>
+
+<body>
+  <section class="hero has-text-centered">
+    <div class="hero-body">
+      <div id="main" class="container">
+        <h1 class="title is-1">
+          Theatrix™
+        </h1>
+        <h2 class="subtitle">
+          Your one stop for all your movie needs
+        </h2>
       </div>
-    </nav>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <h2 class="title is-2">
-        This is the cinema page
-      </h2>
+    </div>
+    <div id="search" class="container field has-addons is-invisible">
+      <div class="control">
+        <p class="control has-icons-left">
+          <input id="searchBar" class="input is-rounded is-medium" type="text" placeholder="Enter the movie name">
+          <span class="icon is-medium is-left">
+            <i class="fas fa-search"></i>
+          </span>
+        </p>
+        <p id="searchError" class="help is-danger is-invisible">A movie <i>must</i> have a name...maybe</p>
+      </div>
+      <div class="control">
+        <button id="searchBtn" class="button is-medium is-info is-rounded">
+          Search
+        </button>
+      </div>
+    </div>
+    <div id="movieError" class="container is-invisible">
+      <p class="title">
+        No movie found :(
+      </p>
       <p class="subtitle">
-        This website is styled using <strong>Bulma.css</strong>!
+        We couldn't find that movie. Try searching something else or check if you have a typo in your search
       </p>
     </div>
   </section>
-  </body>
+  <section class="section has-text-centered">
+    <div id="list" class="columns is-centered">
+    </div>
+    <nav id="paginator" class="pagination is-centered is-centered is-invisible" role="navigation">
+      <ul id="pages" class="pagination-list">
+      </ul>
+    </nav>
+    <p><a href="https://github.com/anirudh-r5/"><img src="https://forthebadge.com/images/badges/open-source.svg" alt="forthebadge"></a></p>
+  </section>
+</body>
+
 </html>
