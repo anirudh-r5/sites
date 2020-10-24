@@ -27,6 +27,8 @@
   "homepage": "https://github.com/anirudh-r5/sites#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "mongoose": "^5.10.10",
     "standard": "^14.3.4"
   },
   "devDependencies": {
