@@ -9,29 +9,79 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body >
+<script>
+   $(function() {
+  $(document).ready(function () {
+    $("#errortext").hide();
+   var todaysDate = new Date();
+   var max=new Date(); 
+   // Gets today's date
+    var year = todaysDate.getFullYear();                        // YYYY
+    var month = ("0" + (todaysDate.getMonth() + 1)).slice(-2);
+    var day = ("0" + todaysDate.getDate()).slice(-2);
+    var minDate = (year +"-"+ month +"-"+ day); 
+    //get maximum date= a month from current date
+    max.setDate(max.getDate()+ 30);
+    var maxyear = max.getFullYear();                        // YYYY
+    var maxmonth = ("0" + (max.getMonth() + 1)).slice(-2);
+    var maxday = ("0" + max.getDate()).slice(-2);
+    var maxDate=(maxyear +"-"+ maxmonth +"-"+ maxday); 
+    //set atributes for datepicker
+    $('#setDate').attr('min',minDate);
+    $('#setDate').attr('max',maxDate);
+  });
 
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+  $("#submit").click(function(){
+    $("#errortext").hide();
+    var date=$('#setDate').val().split('-');
+    var day=date[0];
+    var month=date[1];
+    var year=date[2];
+    day=$.trim(day);
+    month=$.trim(month);
+    year=$.trim(year);
+    if(day===''||month===''||year==='')
+    {
+      $("#errortext").show();
+      return;
+    }
+    else
+    {
+    var finDate = (year +"-"+ month +"-"+ day);
+    alert(finDate);
+    }
+  })
+});
+
+</script>
+  <nav class="navbar has-background-dark " role="navigation" aria-label="main navigation">
     <div class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item" href="http://localhost:3000/">
+        <a class="navbar-item has-text-link-dark has-text-left-mobile" href="http://localhost:3000/">
           Home
         </a>
-        <a class="navbar-item" href="resLogin.html">
+        <a class="navbar-item has-text-link-dark has-text-left-mobile" href="resLogin.html">
           Logout
         </a>
       </div>
     </div>
   </nav>
-  <section class="section">
+  <section class="hero has-background-dark is-fullheight is-bold">
+  
     <div class="container">
-      <h1 class="title is-1 has-text-centered">
+
+      <h1 class="title is-1 has-text-centered has-text-danger-light">
         Welcome to The Restaurant!
      </h1>
-      <p> Make a reservation <input type="date" class="min-today" name="setDate"></p>
-        
-    </div>
-  </section>
+      <p class="has-text-link-light"> Make a reservation <input type="date" id="setDate" class="input is-link"></p>
+      <br>
+      <p id="errortext" class="help is-danger has-text-centered">Please select a date</p><br>
+      <button type="button" id="submit" class="button is-rounded is-success">Submit</button>
+    
+      </div>
+      
+      </section>
 </body>
 
 </html>
