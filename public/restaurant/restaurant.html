@@ -21,7 +21,7 @@
     var month = ("0" + (todaysDate.getMonth() + 1)).slice(-2);
     var day = ("0" + todaysDate.getDate()).slice(-2);
     var minDate = (year +"-"+ month +"-"+ day); 
-    //get maximum date= a month from current date
+    //get maximum date= a month after current date
     max.setDate(max.getDate()+ 30);
     var maxyear = max.getFullYear();                        // YYYY
     var maxmonth = ("0" + (max.getMonth() + 1)).slice(-2);
@@ -74,7 +74,7 @@
       <h1 class="title is-1 has-text-centered has-text-danger-light">
         Welcome to The Restaurant!
      </h1>
-      <p class="has-text-link-light"> Make a reservation <input type="date" id="setDate" class="input is-link"></p>
+      <p class="has-text-link-light is-size-5"> Make a reservation <input type="date" id="setDate" class="input is-link"></p>
       <br>
       <p id="errortext" class="help is-danger has-text-centered">Please select a date</p><br>
       <button type="button" id="submit" class="button is-rounded is-success">Submit</button>
