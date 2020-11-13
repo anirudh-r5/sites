@@ -1,6 +1,6 @@
 {
   "name": "sites",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "A group of websites to be scraped by web-scraper",
   "main": "index.js",
   "scripts": {
