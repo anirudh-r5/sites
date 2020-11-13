@@ -1,0 +1,7 @@
+@import 'bulma.css';
+@import 'csshake.min.css';
+@import 'animate.min.css';
+
+:root {
+    --animate-duration: 0.4s;
+  }

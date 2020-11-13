@@ -1,33 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Calendar!</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="http://localhost:3000/">
-          Home
-        </a>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calendar!</title>
+  <link rel="stylesheet" href="./lib/style.css">
+  <script type="text/javascript" src="./lib/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
+  <script type="text/javascript" src="./lib/main.js"></script>
+</head>
+
+<body>
+  <section class="hero has-text-centered">
+    <div class="hero-body">
+      <div id="main" class="container">
+        <h1 class="title is-1">
+          CalenderAll™
+        </h1>
+        <h2 class="subtitle">
+          One calendar for all your planning needs
+        </h2>
       </div>
     </div>
-  </nav>
+  </section>
   <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <h2 class="title is-2">
-        This is the calendar page
-      </h2>
-      <p class="subtitle">
-        This website is styled using <strong>Bulma.css</strong>!
-      </p>
+    <div class="tabs is-centered is-boxed">
+      <ul id="people">
+        <li class="is-active"><a>Guy 1</a></li>
+        <li><a>Guy 2</a></li>
+        <li><a>Guy 3</a></li>
+      </ul>
+    </div>
+    <div class="columns is-centered">
+      <div id="calendar1" class="column is-narrow">
+      </div>
+      <div id="calendar2" class="column is-narrow is-hidden">
+      </div>
+      <div id="calendar3" class="column is-narrow is-hidden">
+      </div>
+    </div>
+    <div id="save1" class="buttons has-addons is-centered is-hidden">
+      <button id="confirm1" class="button is-danger">Save</button>
+      <button id="cancel1" class="button is-danger is-light">Cancel</button>
+    </div>
+    <div id="save2" class="buttons has-addons is-centered is-hidden">
+      <button id="confirm2" class="button is-success">Save</button>
+      <button id="cancel2" class="button is-success is-light">Cancel</button>
+    </div>
+    <div id="save3" class="buttons has-addons is-centered is-hidden">
+      <button id="confirm3" class="button is-info">Save</button>
+      <button id="cancel3" class="button is-info is-light">Cancel</button>
     </div>
   </section>
-  </body>
+</body>
+
 </html>
